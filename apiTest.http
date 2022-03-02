@@ -1,0 +1,36 @@
+
+http://localhost:8080/
+
+###Get a list of all products
+GET http://localhost:8080/api/objects
+
+
+###Get a list of all published
+GET http://localhost:8080/api/objects/published
+
+### Create a product
+POST http://localhost:8080/api/objects
+Content-Type: application/json
+
+{
+  "title": "New Post"
+}
+
+### GET a product by id
+GET http://localhost:8080/api/objects/621f753be7b0e86d404bd200
+
+### Update a product by id
+PUT  http://localhost:8080/api/objects/621f753be7b0e86d404bd200
+Content-Type: application/json
+
+{
+  "title": "new title 5999",
+  "published": true
+}
+
+
+### Delete a product by id
+DELETE  http://localhost:8080/api/objects/621f6e68d627a376187d3a92
+
+### 404 route Not Found
+GET http://localhost:8080/api/abc_xyz
